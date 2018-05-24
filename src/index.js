@@ -13,5 +13,8 @@ if (!supportsCustomElementsV1) {
 }
 
 import '@polymer/app-layout/app-layout';
+import 'chatbot-message';
+import 'chatbot-input';
+import 'chatbot-list';
 import 'chatbot-app';
 import 'chatbot-app.scss';
