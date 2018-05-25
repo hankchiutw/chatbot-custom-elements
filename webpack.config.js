@@ -35,6 +35,7 @@ let config = {
       template: 'src/index.html'
     }),
     new CopyWebpackPlugin([
+      { from: 'src/*.png', flatten: true },
       'src/favicon.ico',
       'src/manifest.json'
     ])
