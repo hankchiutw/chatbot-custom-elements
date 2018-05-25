@@ -20,14 +20,27 @@ window.customElements.define('chatbot-message', class extends ShadowElement {
           margin: 4px;
           padding: 6px;
           display: block;
-          border: solid 1px blue;
+        }
+
+        .container {
+          color: var(--message-color);
+          background-color: var(--message-bg-color);
+          padding: 8px 14px;
+          border-radius: 34px;
+          display: inline;
         }
 
         :host([right]) {
           text-align: right;
         }
+
+        :host([right]) .container {
+          color: var(--message-color-right);
+          background-color: var(--message-bg-color-right);
+        }
+
        </style>
-       <div>
+       <div class='container'>
        message: ${new Date()}
        </div>
       `;

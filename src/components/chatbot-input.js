@@ -2,6 +2,7 @@
 
 import {html} from 'lit-html';
 import ShadowElement from 'shadow-element';
+import sharedStyle from 'shared-style';
 
 window.customElements.define('chatbot-input', class extends ShadowElement {
   constructor() {
@@ -13,30 +14,41 @@ window.customElements.define('chatbot-input', class extends ShadowElement {
 
   render() {
     return html`
+      ${sharedStyle}
       <style>
         :host {
           display: flex;
-          height: var(--app-footer-height);
+          align-items: center;
           padding: 10px;
-          border: solid 1px grey;
-          border-top: 0;
         }
 
-        input {
-          color: grey;
-          padding: 3px 12px;
+        .input-container {
+          flex: 1;
+          padding: 8px 12px;
+          margin: 0 10px;
           border-radius: var(--app-footer-height);
           border: solid 1px lightgrey;
         }
-       </style>
-       <div></div>
-       <input
-        type='text'
-        placeholder='Aa'
-        />
-       <div>
-         <i class="fas fa-thumbs-up"></i>
-       </div>
+
+        input {
+          border: none;
+        }
+
+        ::placeholder {
+          color: lightgrey;
+        }
+
+      </style>
+      <div></div>
+      <div class='input-container'>
+        <input
+         type='text'
+         placeholder='Type something...'
+         />
+      </div>
+      <div>
+        <i class="fas fa-thumbs-up"></i>
+      </div>
       `;
   }
 });

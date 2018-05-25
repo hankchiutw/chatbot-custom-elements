@@ -12,9 +12,9 @@ if (!supportsCustomElementsV1) {
   // Native support. Good to go.
 }
 
-import '@polymer/app-layout/app-layout';
-import 'chatbot-message';
-import 'chatbot-input';
-import 'chatbot-list';
-import 'chatbot-app';
-import 'chatbot-app.scss';
+import('@polymer/app-layout/app-layout');
+import('chatbot-message');
+import('chatbot-input');
+import('chatbot-list');
+import('chatbot-app');
+import('chatbot-app.scss');
